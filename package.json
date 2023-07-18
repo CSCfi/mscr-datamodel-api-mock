@@ -1,0 +1,25 @@
+{
+  "name": "mscr-datamodel-api-mock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "swagger-autogen": "node swagger.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CSCfi/mscr-datamodel-api-mock.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CSCfi/mscr-datamodel-api-mock/issues"
+  },
+  "homepage": "https://github.com/CSCfi/mscr-datamodel-api-mock#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "swagger-autogen": "^2.23.5",
+    "swagger-ui-express": "^5.0.0"
+  }
+}
