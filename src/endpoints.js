@@ -1,5 +1,8 @@
+const frontend = require('./frontend')
 const schema = require('./schema')
 const crosswalk = require('./crosswalk')
+const admin = require('./admin')
+const user = require('./user')
 
 module.exports = function (app) {
 
@@ -72,5 +75,37 @@ module.exports = function (app) {
         res.setHeader('Content-Type', 'application/json')
         return res.status(200).send(crosswalk.add(true))
     })  
+
+    /**** FRONTEND */
+    app.get('/v2/frontend/searchModels', (req, res) => {
+        /*  #swagger.tags = ['Crosswalk']
+        */
+        res.setHeader('Content-Type', 'application/json')
+        return res.status(200).send(frontend.searchModels(true))
+    })   
+    app.get('/v2/frontend/organizations', (req, res) => {
+        /*  #swagger.tags = ['Crosswalk']
+        */
+        res.setHeader('Content-Type', 'application/json')
+        return res.status(200).send(frontend.organizations(true))
+    })    
+    
+    /*** ADMIN */
+    app.get('/v2/fakeableUsers', (req, res) => {
+        /*  #swagger.tags = ['Crosswalk']
+        */
+        res.setHeader('Content-Type', 'application/json')
+        return res.status(200).send(admin.fakeableUsers(true))
+    })   
+    
+    /*** AUTH */
+    app.get('/api/auth/fake-login', (req, res) => {
+    })
+
+    /*** USER */
+    app.get('/v2/user', (req, res) => {
+        res.status(200).send(user.user(true))
+    })
+
 }
 
