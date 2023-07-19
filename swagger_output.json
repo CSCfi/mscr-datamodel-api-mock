@@ -296,16 +296,6 @@
         }
       }
     },
-    "/api/auth/fake-login": {
-      "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/v2/user": {
       "get": {
         "description": "",

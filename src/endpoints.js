@@ -98,12 +98,18 @@ module.exports = function (app) {
         return res.status(200).send(admin.fakeableUsers(true))
     })   
     
-    /*** AUTH */
-    app.get('/api/auth/fake-login', (req, res) => {
-    })
 
     /*** USER */
     app.get('/v2/user', (req, res) => {
+        const options = {            
+            expires: new Date(Date.now() + 900000),
+            httpOnly: true, // The cookie only accessible by the web server            
+            domain: 'localhost',
+            path: '/'
+
+        }
+        res.cookie('JSESSIONID', 'test'. options)
+            
         res.status(200).send(user.user(true))
     })
 
