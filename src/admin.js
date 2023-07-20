@@ -6,14 +6,7 @@ function fakeableUsers(params) {
           "firstName": "Admin",
           "lastName": "User",
           "removedDateTime": null
-        },
-        {
-            "id": "fcef4c7f-52e6-4baa-9553-fc07c99a914c",
-            "email": "testi.testaaja@example.org",
-            "firstName": "Testi",
-            "lastName": "Testaaja",
-            "removedDateTime": null
-          }        
+        }      
       ]
 }
 

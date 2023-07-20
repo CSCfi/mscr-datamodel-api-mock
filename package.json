@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/CSCfi/mscr-datamodel-api-mock#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "swagger-autogen": "^2.23.5",
     "swagger-ui-express": "^5.0.0"

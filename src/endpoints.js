@@ -103,6 +103,48 @@ module.exports = function (app) {
           x.status === status &&
           x.organizations.includes((y) => y.id == organization)
       );
+    /**** FRONTEND */
+    app.get("/v2/frontend/searchModels", (req, res) => {
+      /*  #swagger.tags = ['Frontend']
+       */
+      res.setHeader("Content-Type", "application/json");
+      return res.status(200).send(frontend.searchModels(true));
+    });
+    app.get("/v2/frontend/organizations", (req, res) => {
+      /*  #swagger.tags = ['Frontend']
+       */
+      res.setHeader("Content-Type", "application/json");
+      return res.status(200).send(frontend.organizations(true));
+    });
+
+    app.get("/v2/frontend/mscrSearch", (req, res) => {
+      /*  #swagger.tags = ['Frontend']
+       */
+      const type = req.query.type;
+      res.setHeader("Content-Type", "application/json");
+      return res.status(200).send(frontend.mscrSearch({ "_type": type }));
+    });
+
+    /*** ADMIN */
+    app.get("/v2/fakeableUsers", (req, res) => {
+      /*  #swagger.tags = ['Crosswalk']
+       */
+      res.setHeader("Content-Type", "application/json");
+      return res.status(200).send(admin.fakeableUsers(true));
+    });
+
+    /*** USER */
+    app.get("/v2/user", (req, res) => {
+      const options = {
+        expires: new Date(Date.now() + 900000),
+        httpOnly: true, // The cookie only accessible by the web server
+        domain: "localhost",
+        path: "/",
+      };
+      res.cookie("JSESSIONID", "test".options);
+
+      res.status(200).send(user.user(true));
+    });
 
     return res.status(200).send(result);
   });
