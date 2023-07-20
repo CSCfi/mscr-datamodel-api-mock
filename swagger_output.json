@@ -251,7 +251,7 @@
     "/v2/frontend/searchModels": {
       "get": {
         "tags": [
-          "Crosswalk"
+          "Frontend"
         ],
         "description": "",
         "produces": [
@@ -267,11 +267,34 @@
     "/v2/frontend/organizations": {
       "get": {
         "tags": [
-          "Crosswalk"
+          "Frontend"
         ],
         "description": "",
         "produces": [
           "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/v2/frontend/mscrSearch": {
+      "get": {
+        "tags": [
+          "Frontend"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "type": "string"
+          }
         ],
         "responses": {
           "200": {

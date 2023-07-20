@@ -78,17 +78,25 @@ module.exports = function (app) {
 
     /**** FRONTEND */
     app.get('/v2/frontend/searchModels', (req, res) => {
-        /*  #swagger.tags = ['Crosswalk']
+        /*  #swagger.tags = ['Frontend']
         */
         res.setHeader('Content-Type', 'application/json')
         return res.status(200).send(frontend.searchModels(true))
     })   
     app.get('/v2/frontend/organizations', (req, res) => {
-        /*  #swagger.tags = ['Crosswalk']
+        /*  #swagger.tags = ['Frontend']
         */
         res.setHeader('Content-Type', 'application/json')
         return res.status(200).send(frontend.organizations(true))
-    })    
+    }) 
+    
+    app.get('/v2/frontend/mscrSearch', (req, res) => {
+        /*  #swagger.tags = ['Frontend']
+        */
+        const type = req.query.type
+        res.setHeader('Content-Type', 'application/json')
+        return res.status(200).send(frontend.mscrSearch({"_type": type}))        
+    })
     
     /*** ADMIN */
     app.get('/v2/fakeableUsers', (req, res) => {
