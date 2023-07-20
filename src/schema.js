@@ -1,103 +1,99 @@
-const fs = require('fs');
+const fs = require("fs");
 
 function add(params) {
-    return {
-        "created": "string",
-        "modified": "string",
-        "modifier": {
-          "id": "string",
-          "name": "string"
-        },
-        "creator": {
-          "id": "string",
-          "name": "string"
-        },
-        "type": "PROFILE",
-        "prefix": "string",
-        "status": "INCOMPLETE",
+  return {
+    "created": "string",
+    "modified": "string",
+    "modifier": {
+      "id": "string",
+      "name": "string",
+    },
+    "creator": {
+      "id": "string",
+      "name": "string",
+    },
+    "type": "PROFILE",
+    "prefix": "string",
+    "status": "INCOMPLETE",
+    "label": {
+      "additionalProp1": "string",
+      "additionalProp2": "string",
+      "additionalProp3": "string",
+    },
+    "description": {
+      "additionalProp1": "string",
+      "additionalProp2": "string",
+      "additionalProp3": "string",
+    },
+    "languages": ["string"],
+    "organizations": [
+      {
+        "id": "string",
         "label": {
           "additionalProp1": "string",
           "additionalProp2": "string",
-          "additionalProp3": "string"
+          "additionalProp3": "string",
         },
-        "description": {
+        "parentOrganization": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      },
+    ],
+    "groups": [
+      {
+        "id": "string",
+        "label": {
           "additionalProp1": "string",
           "additionalProp2": "string",
-          "additionalProp3": "string"
+          "additionalProp3": "string",
         },
-        "languages": [
-          "string"
-        ],
-        "organizations": [
-          {
-            "id": "string",
-            "label": {
-              "additionalProp1": "string",
-              "additionalProp2": "string",
-              "additionalProp3": "string"
-            },
-            "parentOrganization": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
-          }
-        ],
-        "groups": [
-          {
-            "id": "string",
-            "label": {
-              "additionalProp1": "string",
-              "additionalProp2": "string",
-              "additionalProp3": "string"
-            },
-            "identifier": "string"
-          }
-        ],
-        "internalNamespaces": [
-          "string"
-        ],
-        "externalNamespaces": [
-          {
-            "name": "string",
-            "namespace": "string",
-            "prefix": "string"
-          }
-        ],
-        "terminologies": [
-          {
-            "label": {
-              "additionalProp1": "string",
-              "additionalProp2": "string",
-              "additionalProp3": "string"
-            },
-            "uri": "string"
-          }
-        ],
-        "codeLists": [
-          {
-            "id": "string",
-            "prefLabel": {
-              "additionalProp1": "string",
-              "additionalProp2": "string",
-              "additionalProp3": "string"
-            },
-            "status": "INCOMPLETE"
-          }
-        ],
-        "contact": "string",
-        "documentation": {
+        "identifier": "string",
+      },
+    ],
+    "internalNamespaces": ["string"],
+    "externalNamespaces": [
+      {
+        "name": "string",
+        "namespace": "string",
+        "prefix": "string",
+      },
+    ],
+    "terminologies": [
+      {
+        "label": {
           "additionalProp1": "string",
           "additionalProp2": "string",
-          "additionalProp3": "string"
+          "additionalProp3": "string",
         },
-        "format": "CSV",
-        "aggregationKey": "string",
-        "fileMetadata": [
-          {
-            "contentType": "string",
-            "size": 0,
-            "fileID": 0
-          }
-        ],
-        "pid": "string"
-      }
+        "uri": "string",
+      },
+    ],
+    "codeLists": [
+      {
+        "id": "string",
+        "prefLabel": {
+          "additionalProp1": "string",
+          "additionalProp2": "string",
+          "additionalProp3": "string",
+        },
+        "status": "INCOMPLETE",
+      },
+    ],
+    "contact": "string",
+    "documentation": {
+      "additionalProp1": "string",
+      "additionalProp2": "string",
+      "additionalProp3": "string",
+    },
+    "format": "CSV",
+    "aggregationKey": "string",
+    "fileMetadata": [
+      {
+        "contentType": "string",
+        "size": 0,
+        "fileID": 0,
+      },
+    ],
+    "pid": "string",
+  };
 }
 
 function upload(params) {
@@ -106,11 +102,11 @@ function upload(params) {
     "modified": "string",
     "modifier": {
       "id": "string",
-      "name": "string"
+      "name": "string",
     },
     "creator": {
       "id": "string",
-      "name": "string"
+      "name": "string",
     },
     "type": "PROFILE",
     "prefix": "string",
@@ -118,26 +114,24 @@ function upload(params) {
     "label": {
       "additionalProp1": "string",
       "additionalProp2": "string",
-      "additionalProp3": "string"
+      "additionalProp3": "string",
     },
     "description": {
       "additionalProp1": "string",
       "additionalProp2": "string",
-      "additionalProp3": "string"
+      "additionalProp3": "string",
     },
-    "languages": [
-      "string"
-    ],
+    "languages": ["string"],
     "organizations": [
       {
         "id": "string",
         "label": {
           "additionalProp1": "string",
           "additionalProp2": "string",
-          "additionalProp3": "string"
+          "additionalProp3": "string",
         },
-        "parentOrganization": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
-      }
+        "parentOrganization": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      },
     ],
     "groups": [
       {
@@ -145,30 +139,28 @@ function upload(params) {
         "label": {
           "additionalProp1": "string",
           "additionalProp2": "string",
-          "additionalProp3": "string"
+          "additionalProp3": "string",
         },
-        "identifier": "string"
-      }
+        "identifier": "string",
+      },
     ],
-    "internalNamespaces": [
-      "string"
-    ],
+    "internalNamespaces": ["string"],
     "externalNamespaces": [
       {
         "name": "string",
         "namespace": "string",
-        "prefix": "string"
-      }
+        "prefix": "string",
+      },
     ],
     "terminologies": [
       {
         "label": {
           "additionalProp1": "string",
           "additionalProp2": "string",
-          "additionalProp3": "string"
+          "additionalProp3": "string",
         },
-        "uri": "string"
-      }
+        "uri": "string",
+      },
     ],
     "codeLists": [
       {
@@ -176,16 +168,16 @@ function upload(params) {
         "prefLabel": {
           "additionalProp1": "string",
           "additionalProp2": "string",
-          "additionalProp3": "string"
+          "additionalProp3": "string",
         },
-        "status": "INCOMPLETE"
-      }
+        "status": "INCOMPLETE",
+      },
     ],
     "contact": "string",
     "documentation": {
       "additionalProp1": "string",
       "additionalProp2": "string",
-      "additionalProp3": "string"
+      "additionalProp3": "string",
     },
     "format": "CSV",
     "aggregationKey": "string",
@@ -193,11 +185,11 @@ function upload(params) {
       {
         "contentType": "string",
         "size": 0,
-        "fileID": 0
-      }
+        "fileID": 0,
+      },
     ],
-    "pid": "string"
-  }
+    "pid": "string",
+  };
 }
 
 function get(params) {
@@ -206,11 +198,11 @@ function get(params) {
     "modified": "string",
     "modifier": {
       "id": "string",
-      "name": "string"
+      "name": "string",
     },
     "creator": {
       "id": "string",
-      "name": "string"
+      "name": "string",
     },
     "type": "PROFILE",
     "prefix": "string",
@@ -218,26 +210,24 @@ function get(params) {
     "label": {
       "additionalProp1": "string",
       "additionalProp2": "string",
-      "additionalProp3": "string"
+      "additionalProp3": "string",
     },
     "description": {
       "additionalProp1": "string",
       "additionalProp2": "string",
-      "additionalProp3": "string"
+      "additionalProp3": "string",
     },
-    "languages": [
-      "string"
-    ],
+    "languages": ["string"],
     "organizations": [
       {
         "id": "string",
         "label": {
           "additionalProp1": "string",
           "additionalProp2": "string",
-          "additionalProp3": "string"
+          "additionalProp3": "string",
         },
-        "parentOrganization": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
-      }
+        "parentOrganization": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      },
     ],
     "groups": [
       {
@@ -245,30 +235,28 @@ function get(params) {
         "label": {
           "additionalProp1": "string",
           "additionalProp2": "string",
-          "additionalProp3": "string"
+          "additionalProp3": "string",
         },
-        "identifier": "string"
-      }
+        "identifier": "string",
+      },
     ],
-    "internalNamespaces": [
-      "string"
-    ],
+    "internalNamespaces": ["string"],
     "externalNamespaces": [
       {
         "name": "string",
         "namespace": "string",
-        "prefix": "string"
-      }
+        "prefix": "string",
+      },
     ],
     "terminologies": [
       {
         "label": {
           "additionalProp1": "string",
           "additionalProp2": "string",
-          "additionalProp3": "string"
+          "additionalProp3": "string",
         },
-        "uri": "string"
-      }
+        "uri": "string",
+      },
     ],
     "codeLists": [
       {
@@ -276,16 +264,16 @@ function get(params) {
         "prefLabel": {
           "additionalProp1": "string",
           "additionalProp2": "string",
-          "additionalProp3": "string"
+          "additionalProp3": "string",
         },
-        "status": "INCOMPLETE"
-      }
+        "status": "INCOMPLETE",
+      },
     ],
     "contact": "string",
     "documentation": {
       "additionalProp1": "string",
       "additionalProp2": "string",
-      "additionalProp3": "string"
+      "additionalProp3": "string",
     },
     "format": "CSV",
     "aggregationKey": "string",
@@ -293,19 +281,126 @@ function get(params) {
       {
         "contentType": "string",
         "size": 0,
-        "fileID": 0
-      }
+        "fileID": 0,
+      },
     ],
-    "pid": "string"
-  }  
+    "pid": "string",
+  };
+}
+
+function getAllSchemas(params) {
+  return [
+    {
+      "created": "string",
+      "modified": "string",
+      "modifier": {
+        "id": "1",
+        "name": "string",
+      },
+      "creator": {
+        "id": "1",
+        "name": "one",
+      },
+      "type": "PROFILE",
+      "prefix": "string",
+      "status": "INCOMPLETE",
+      "organizations": [
+        {
+          "id": "1",
+          "label": {
+            "additionalProp1": "string",
+          },
+          "parentOrganization": "oneone",
+        },
+      ],
+      "groups": [
+        {
+          "id": "1",
+          "label": {
+            "additionalProp1": "string",
+          },
+          "identifier": "string",
+        },
+      ],
+      "pid": "1",
+    },
+    {
+      "created": "string",
+      "modified": "string",
+      "modifier": {
+        "id": "2",
+        "name": "string",
+      },
+      "creator": {
+        "id": "2",
+        "name": "two",
+      },
+      "type": "PROFILE",
+      "prefix": "string",
+      "status": "INCOMPLETE",
+      "organizations": [
+        {
+          "id": "1",
+          "label": {
+            "additionalProp1": "string",
+          },
+          "parentOrganization": "oneone",
+        },
+      ],
+      "groups": [
+        {
+          "id": "1",
+          "label": {
+            "additionalProp1": "string",
+          },
+          "identifier": "string",
+        },
+      ],
+      "pid": "2",
+    },
+    {
+      "created": "string",
+      "modified": "string",
+      "modifier": {
+        "id": "3",
+        "name": "string",
+      },
+      "creator": {
+        "id": "2",
+        "name": "two",
+      },
+      "type": "PROFILE",
+      "prefix": "string",
+      "status": "INCOMPLETE",
+      "organizations": [
+        {
+          "id": "2",
+          "label": {
+            "additionalProp1": "string",
+          },
+          "parentOrganization": "twotwo",
+        },
+      ],
+      "groups": [
+        {
+          "id": "2",
+          "label": {
+            "additionalProp1": "string",
+          },
+          "identifier": "string",
+        },
+      ],
+      "pid": "3",
+    },
+  ];
 }
 
 function getOriginal(params) {
-  return fs.readFileSync('data/schema_original_data.json')
+  return fs.readFileSync("data/schema_original_data.json");
 }
 
 function getInternal(params) {
-  return fs.readFileSync('data/schema_internal_data.ttl')
+  return fs.readFileSync("data/schema_internal_data.ttl");
 }
 
 module.exports = {
@@ -313,5 +408,6 @@ module.exports = {
   upload,
   get,
   getOriginal,
-  getInternal
-}
+  getInternal,
+  getAllSchemas,
+};
