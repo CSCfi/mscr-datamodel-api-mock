@@ -5,6 +5,12 @@ const admin = require("./admin");
 const user = require("./user");
 
 module.exports = function (app) {
+  app.put("/v2/schemaFull", (req, res) => {
+        /*  #swagger.tags = ['Schema']
+         */
+        res.setHeader("Content-Type", "application/json");
+        return res.status(200).send(schema.add(true));
+      });    
   app.put("/v2/schema", (req, res) => {
     /*  #swagger.tags = ['Schema']
      */
@@ -43,7 +49,12 @@ module.exports = function (app) {
   });
 
   /**** CROSSWALK */
-
+  app.put("/v2/crosswalkFull", (req, res) => {
+    /*  #swagger.tags = ['Crosswalk']
+     */
+    res.setHeader("Content-Type", "application/json");
+    return res.status(200).send(crosswalk.add(true));
+  });
   app.put("/v2/crosswalk", (req, res) => {
     /*  #swagger.tags = ['Crosswalk']
      */
