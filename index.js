@@ -4,7 +4,7 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerFile = require("./swagger_output.json");
 const cors = require("cors");
 var corsoption = {
-  origin: "http://localhost:3001", //origin from where you requesting
+  origin: "*", //origin from where you requesting
   credentials: true,
 };
 //using cors
