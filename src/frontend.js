@@ -51,27 +51,25 @@ function organizations(params) {
 }
 
 function mscrSearch({ _type }) {
-  if (_type == 'crosswalk') {
+  if (_type == 'CROSSWALK') {
     return {
-      "took": 18,
+      "took": 10,
       "timed_out": false,
       "_shards": {
-        "total": 1,
-        "successful": 1,
-        "skipped": 0,
-        "failed": 0
+        "failed": 0.0,
+        "successful": 2.0,
+        "total": 2.0,
+        "skipped": 0.0
       },
       "hits": {
         "total": {
-          "value": 1,
-          "relation": "eq"
+          "relation": "eq",
+          "value": 1
         },
-        "max_score": 1,
         "hits": [
           {
             "_index": "crosswalks_v2",
             "_id": "urn%3AIAMNOTAPID%3Af4f11101-6f95-4936-812d-1230b98ecfb5",
-            "_score": 1,
             "_source": {
               "id": "urn:IAMNOTAPID:f4f11101-6f95-4936-812d-1230b98ecfb5",
               "label": {
@@ -89,282 +87,301 @@ function mscrSearch({ _type }) {
               "contributor": [
                 "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63"
               ],
+              "organizations": [
+                {
+                  "id": "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63",
+                  "label": {
+                    "fi": "test",
+                    "sv": "test",
+                    "en": "test"
+                  }
+                }
+              ],
               "isPartOf": [],
               "language": [
                 "en"
               ],
+              "numberOfRevisions": 0,
               "sourceSchema": "urn:IAMNOTAPID:d840d215-5a16-4e5d-af68-70a059d58b59",
               "targetSchema": "urn:IAMNOTAPID:3a56a297-1f01-42c0-bc72-47b2345f6368"
-            }
+            },
+            "sort": [
+              null
+            ]
           }
         ]
       },
       "aggregations": {
-        "languages": {
+        "sterms#isReferenced": {
+          "buckets": [],
           "doc_count_error_upper_bound": 0,
-          "sum_other_doc_count": 0,
+          "sum_other_doc_count": 0
+        },
+        "sterms#organization": {
+          "buckets": [],
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0
+        },
+        "sterms#format": {
+          "buckets": [],
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0
+        },
+        "sterms#type": {
           "buckets": [
             {
-              "key": "en",
-              "doc_count": 1
+              "doc_count": 1,
+              "key": "CROSSWALK"
             }
-          ]
+          ],
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0
+        },
+        "sterms#status": {
+          "buckets": [
+            {
+              "doc_count": 1,
+              "key": "VALID"
+            }
+          ],
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0
         }
       }
     }
   }
   else {
     return {
-      "took": 2,
+      "took": 13,
       "timed_out": false,
       "_shards": {
-        "total": 1,
-        "successful": 1,
-        "skipped": 0,
-        "failed": 0
+        "failed": 0.0,
+        "successful": 2.0,
+        "total": 2.0,
+        "skipped": 0.0
       },
       "hits": {
         "total": {
-          "value": 8,
-          "relation": "eq"
+          "relation": "eq",
+          "value": 3
         },
-        "max_score": 1,
         "hits": [
           {
-            "_index": "models_v2",
-            "_id": "urn%3AIAMNOTAPID%3Ae6d55117-1117-4192-9c4f-6d1ef4f9ddf0",
-            "_score": 1,
+            "_index": "schemas_v2",
+            "_id": "urn%3AIAMNOTAPID%3A8e841112-054f-4333-96a3-4553d521143f",
             "_source": {
-              "id": "urn:IAMNOTAPID:e6d55117-1117-4192-9c4f-6d1ef4f9ddf0",
+              "id": "urn:IAMNOTAPID:8e841112-054f-4333-96a3-4553d521143f",
               "label": {
-                "en": "string"
+                "en": "string2"
               },
-              "status": "INCOMPLETE",
-              "modified": "2023-06-22T06:48:04.906Z",
-              "created": "2023-06-22T06:48:04.906Z",
-              "contentModified": "2023-06-22T06:48:04.906Z",
+              "status": "DRAFT",
+              "modified": "2023-07-28T08:25:16.139Z",
+              "created": "2023-07-28T08:25:16.139Z",
+              "contentModified": "2023-07-28T08:25:16.139Z",
               "type": "SCHEMA",
-              "prefix": "urn:IAMNOTAPID:e6d55117-1117-4192-9c4f-6d1ef4f9ddf0",
+              "prefix": "urn:IAMNOTAPID:8e841112-054f-4333-96a3-4553d521143f",
               "comment": {
                 "en": "string"
               },
               "contributor": [
                 "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63"
               ],
+              "organizations": [
+                {
+                  "id": "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63",
+                  "label": {
+                    "fi": "test",
+                    "sv": "test",
+                    "en": "test"
+                  }
+                }
+              ],
               "isPartOf": [],
               "language": [
                 "en"
+              ],
+              "format": "JSONSCHEMA",
+              "aggregationKey": "urn:IAMNOTAPID:74e4e816-098a-4f01-aab5-fdc992a4391c",
+              "revisionOf": "urn:IAMNOTAPID:cc671dc3-4b31-436c-9b34-90fee89c6f69",
+              "numberOfRevisions": 2,
+              "revisions": [
+                {
+                  "pid": "urn:IAMNOTAPID:74e4e816-098a-4f01-aab5-fdc992a4391c",
+                  "created": 1690532684240,
+                  "label": {
+                    "en": "string2"
+                  },
+                  "versionLabel": "1"
+                },
+                {
+                  "pid": "urn:IAMNOTAPID:cc671dc3-4b31-436c-9b34-90fee89c6f69",
+                  "created": 1690532702088,
+                  "label": {
+                    "en": "string2"
+                  },
+                  "versionLabel": "1"
+                },
+                {
+                  "pid": "urn:IAMNOTAPID:8e841112-054f-4333-96a3-4553d521143f",
+                  "created": 1690532716139,
+                  "label": {
+                    "en": "string2"
+                  },
+                  "versionLabel": "1.1sdsds"
+                }
               ]
-            }
-          }
-          ,
+            },
+            "sort": [
+              null
+            ]
+          },
           {
-            "_index": "models_v2",
-            "_id": "urn%3AIAMNOTAPID%3A62ae6e1d-a38a-487f-bfc4-29e7fd35cc16",
-            "_score": 1,
+            "_index": "schemas_v2",
+            "_id": "urn%3AIAMNOTAPID%3A76ccbb55-a39f-4561-bf3e-7a2b8b083a8c",
             "_source": {
-              "id": "urn:IAMNOTAPID:62ae6e1d-a38a-487f-bfc4-29e7fd35cc16",
+              "id": "urn:IAMNOTAPID:76ccbb55-a39f-4561-bf3e-7a2b8b083a8c",
               "label": {
-                "en": "string"
+                "en": "string2"
               },
-              "status": "VALID",
-              "modified": "2023-06-22T14:18:06.563Z",
-              "created": "2023-06-22T14:18:06.563Z",
-              "contentModified": "2023-06-22T14:18:06.563Z",
+              "status": "DRAFT",
+              "modified": "2023-07-28T09:18:24.764Z",
+              "created": "2023-07-28T09:18:24.764Z",
+              "contentModified": "2023-07-28T09:18:24.764Z",
               "type": "SCHEMA",
-              "prefix": "urn:IAMNOTAPID:62ae6e1d-a38a-487f-bfc4-29e7fd35cc16",
+              "prefix": "urn:IAMNOTAPID:76ccbb55-a39f-4561-bf3e-7a2b8b083a8c",
               "comment": {
                 "en": "string"
               },
               "contributor": [
                 "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63"
               ],
+              "organizations": [
+                {
+                  "id": "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63",
+                  "label": {
+                    "fi": "test",
+                    "sv": "test",
+                    "en": "test"
+                  }
+                }
+              ],
               "isPartOf": [],
               "language": [
                 "en"
+              ],
+              "format": "JSONSCHEMA",
+              "aggregationKey": "urn:IAMNOTAPID:76ccbb55-a39f-4561-bf3e-7a2b8b083a8c",
+              "numberOfRevisions": 3,
+              "revisions": [
+                {
+                  "pid": "urn:IAMNOTAPID:76ccbb55-a39f-4561-bf3e-7a2b8b083a8c",
+                  "created": 1690535904764,
+                  "label": {
+                    "en": "string2"
+                  },
+                  "versionLabel": "1.1sdsds"
+                }
               ]
-            }
-          }
-          ,
+            },
+            "sort": [
+              null
+            ]
+          },
           {
-            "_index": "models_v2",
-            "_id": "urn%3AIAMNOTAPID%3A35d37410-5b1c-428c-98c7-f97539f991fd",
-            "_score": 1,
+            "_index": "schemas_v2",
+            "_id": "urn%3AIAMNOTAPID%3A47cbdb3c-feeb-489c-a852-4642453a3f69",
             "_source": {
-              "id": "urn:IAMNOTAPID:35d37410-5b1c-428c-98c7-f97539f991fd",
+              "id": "urn:IAMNOTAPID:47cbdb3c-feeb-489c-a852-4642453a3f69",
               "label": {
-                "en": "string"
+                "en": "string2"
               },
-              "status": "VALID",
-              "modified": "2023-06-22T13:32:29.449Z",
-              "created": "2023-06-22T13:32:29.449Z",
-              "contentModified": "2023-06-22T13:32:29.449Z",
+              "status": "DRAFT",
+              "modified": "2023-07-28T09:13:24.349Z",
+              "created": "2023-07-28T09:13:24.349Z",
+              "contentModified": "2023-07-28T09:13:24.349Z",
               "type": "SCHEMA",
-              "prefix": "urn:IAMNOTAPID:35d37410-5b1c-428c-98c7-f97539f991fd",
+              "prefix": "urn:IAMNOTAPID:47cbdb3c-feeb-489c-a852-4642453a3f69",
               "comment": {
                 "en": "string"
               },
               "contributor": [
                 "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63"
               ],
-              "isPartOf": [],
-              "language": [
-                "en"
-              ]
-            }
-          }
-          ,
-          {
-            "_index": "models_v2",
-            "_id": "urn%3AIAMNOTAPID%3A3484146d-f2d2-4552-bfde-e42ec7de0e52",
-            "_score": 1,
-            "_source": {
-              "id": "urn:IAMNOTAPID:3484146d-f2d2-4552-bfde-e42ec7de0e52",
-              "label": {
-                "en": "string"
-              },
-              "status": "VALID",
-              "modified": "2023-06-22T13:25:47.493Z",
-              "created": "2023-06-22T13:25:47.493Z",
-              "contentModified": "2023-06-22T13:25:47.493Z",
-              "type": "SCHEMA",
-              "prefix": "urn:IAMNOTAPID:3484146d-f2d2-4552-bfde-e42ec7de0e52",
-              "comment": {
-                "en": "string"
-              },
-              "contributor": [
-                "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63"
+              "organizations": [
+                {
+                  "id": "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63",
+                  "label": {
+                    "fi": "test",
+                    "sv": "test",
+                    "en": "test"
+                  }
+                }
               ],
               "isPartOf": [],
               "language": [
                 "en"
-              ]
-            }
-          }
-          ,
-          {
-            "_index": "models_v2",
-            "_id": "urn%3AIAMNOTAPID%3A2cae333e-882b-4bad-80dd-762f2d34c6bf",
-            "_score": 1,
-            "_source": {
-              "id": "urn:IAMNOTAPID:2cae333e-882b-4bad-80dd-762f2d34c6bf",
-              "label": {
-                "en": "string"
-              },
-              "status": "INCOMPLETE",
-              "modified": "2023-06-16T07:19:57.072Z",
-              "created": "2023-06-16T07:19:57.072Z",
-              "contentModified": "2023-06-16T07:19:57.072Z",
-              "type": "SCHEMA",
-              "prefix": "urn:IAMNOTAPID:2cae333e-882b-4bad-80dd-762f2d34c6bf",
-              "comment": {
-                "en": "string"
-              },
-              "contributor": [
-                "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63"
               ],
-              "isPartOf": [],
-              "language": [
-                "en"
+              "format": "JSONSCHEMA",
+              "aggregationKey": "12e769faa99930e017ab7be9b7fed4aa",
+              "revisionOf": "urn:IAMNOTAPID:cc671dc3-4b31-436c-9b34-90fee89c6f69",
+              "numberOfRevisions": 2,
+              "revisions": [
+                {
+                  "pid": "urn:IAMNOTAPID:47cbdb3c-feeb-489c-a852-4642453a3f69",
+                  "created": 1690535604349,
+                  "label": {
+                    "en": "string2"
+                  },
+                  "versionLabel": "1.1sdsds"
+                }
               ]
-            }
-          }
-          ,
-          {
-            "_index": "models_v2",
-            "_id": "urn%3AIAMNOTAPID%3A287a3d46-ed7b-454d-a6a5-9765b7c34baa",
-            "_score": 1,
-            "_source": {
-              "id": "urn:IAMNOTAPID:287a3d46-ed7b-454d-a6a5-9765b7c34baa",
-              "label": {
-                "en": "string"
-              },
-              "status": "VALID",
-              "modified": "2023-06-22T06:48:53.45Z",
-              "created": "2023-06-22T06:48:53.45Z",
-              "contentModified": "2023-06-22T06:48:53.45Z",
-              "type": "SCHEMA",
-              "prefix": "urn:IAMNOTAPID:287a3d46-ed7b-454d-a6a5-9765b7c34baa",
-              "comment": {
-                "en": "string"
-              },
-              "contributor": [
-                "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63"
-              ],
-              "isPartOf": [],
-              "language": [
-                "en"
-              ]
-            }
-          }
-          ,
-          {
-            "_index": "models_v2",
-            "_id": "urn%3AIAMNOTAPID%3A88c905e5-5c0b-4eda-801e-4f26318556bf",
-            "_score": 1,
-            "_source": {
-              "id": "urn:IAMNOTAPID:88c905e5-5c0b-4eda-801e-4f26318556bf",
-              "label": {
-                "en": "string"
-              },
-              "status": "VALID",
-              "modified": "2023-06-22T14:11:56.546Z",
-              "created": "2023-06-22T14:11:56.546Z",
-              "contentModified": "2023-06-22T14:11:56.546Z",
-              "type": "SCHEMA",
-              "prefix": "urn:IAMNOTAPID:88c905e5-5c0b-4eda-801e-4f26318556bf",
-              "comment": {
-                "en": "string"
-              },
-              "contributor": [
-                "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63"
-              ],
-              "isPartOf": [],
-              "language": [
-                "en"
-              ]
-            }
-          }
-          ,
-          {
-            "_index": "models_v2",
-            "_id": "urn%3AIAMNOTAPID%3A9291d5b8-a0fe-4b9c-9b8b-5361034d5377",
-            "_score": 1,
-            "_source": {
-              "id": "urn:IAMNOTAPID:9291d5b8-a0fe-4b9c-9b8b-5361034d5377",
-              "label": {
-                "en": "string"
-              },
-              "status": "VALID",
-              "modified": "2023-06-22T13:20:30.403Z",
-              "created": "2023-06-22T13:20:30.403Z",
-              "contentModified": "2023-06-22T13:20:30.403Z",
-              "type": "SCHEMA",
-              "prefix": "urn:IAMNOTAPID:9291d5b8-a0fe-4b9c-9b8b-5361034d5377",
-              "comment": {
-                "en": "string"
-              },
-              "contributor": [
-                "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63"
-              ],
-              "isPartOf": [],
-              "language": [
-                "en"
-              ]
-            }
+            },
+            "sort": [
+              null
+            ]
           }
         ]
       },
       "aggregations": {
-        "languages": {
+        "sterms#isReferenced": {
+          "buckets": [],
           "doc_count_error_upper_bound": 0,
-          "sum_other_doc_count": 0,
+          "sum_other_doc_count": 0
+        },
+        "sterms#organization": {
+          "buckets": [],
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0
+        },
+        "sterms#format": {
           "buckets": [
             {
-              "key": "en",
-              "doc_count": 8
+              "doc_count": 3,
+              "key": "JSONSCHEMA"
             }
-          ]
+          ],
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0
+        },
+        "sterms#type": {
+          "buckets": [
+            {
+              "doc_count": 3,
+              "key": "SCHEMA"
+            }
+          ],
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0
+        },
+        "sterms#status": {
+          "buckets": [
+            {
+              "doc_count": 3,
+              "key": "DRAFT"
+            }
+          ],
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0
         }
       }
     }
