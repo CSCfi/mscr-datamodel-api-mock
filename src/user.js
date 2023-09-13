@@ -19,7 +19,13 @@ function user(params) {
       credentialsNonExpired: true,
       password: null,
       username: 'admin@localhost',
-      authorities: [ { authority: 'ROLE_ADMIN' }, { authority: 'ROLE_USER' } ]
+      authorities: [ { authority: 'ROLE_ADMIN' }, { authority: 'ROLE_USER' } ],
+      organizations: [
+        {
+          id: '7d3a3c00-5a6b-489b-a3ed-63bb58c26a63',
+          name: "Test org"
+        }
+      ]
     }
 }
 
