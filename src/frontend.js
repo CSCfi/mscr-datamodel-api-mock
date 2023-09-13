@@ -11,7 +11,9 @@ function searchModels(params) {
           "additionalProp2": "string",
           "additionalProp3": "string"
         },
-        "status": "INCOMPLETE",
+        "status": "DRAFT",
+        "state": "DRAFT",
+        "visibility": "PUBLIC", 
         "modified": "string",
         "created": "string",
         "contentModified": "string",
@@ -75,7 +77,9 @@ function mscrSearch({ _type }) {
               "label": {
                 "en": "string"
               },
-              "status": "VALID",
+              "status": "DRAFT",
+              "state": "DRAFT",
+              "visibility": "PUBLIC", 
               "modified": "2023-06-22T13:32:44.288Z",
               "created": "2023-06-16T07:03:11.42Z",
               "contentModified": "2023-06-16T07:03:11.42Z",
@@ -175,6 +179,8 @@ function mscrSearch({ _type }) {
                 "en": "string2"
               },
               "status": "DRAFT",
+              "state": "DRAFT",
+              "visibility": "PUBLIC", 
               "modified": "2023-07-28T08:25:16.139Z",
               "created": "2023-07-28T08:25:16.139Z",
               "contentModified": "2023-07-28T08:25:16.139Z",
@@ -244,6 +250,8 @@ function mscrSearch({ _type }) {
                 "en": "string2"
               },
               "status": "DRAFT",
+              "state": "DRAFT",
+              "visibility": "PUBLIC", 
               "modified": "2023-07-28T09:18:24.764Z",
               "created": "2023-07-28T09:18:24.764Z",
               "contentModified": "2023-07-28T09:18:24.764Z",
@@ -296,6 +304,8 @@ function mscrSearch({ _type }) {
                 "en": "string2"
               },
               "status": "DRAFT",
+              "state": "DRAFT",
+              "visibility": "PUBLIC", 
               "modified": "2023-07-28T09:13:24.349Z",
               "created": "2023-07-28T09:13:24.349Z",
               "contentModified": "2023-07-28T09:13:24.349Z",

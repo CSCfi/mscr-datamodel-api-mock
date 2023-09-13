@@ -18,7 +18,9 @@ function add(params) {
         "additionalProp3": "string"
       },
       "editorialNote": "string",
-      "status": "INCOMPLETE",
+      "status": "DRAFT",
+      "state": "DRAFT",
+      "visibility": "PUBLIC",      
       "subject": {
         "conceptURI": "string",
         "label": {
@@ -100,7 +102,9 @@ function upload(params) {
       "additionalProp3": "string"
     },
     "editorialNote": "string",
-    "status": "INCOMPLETE",
+    "status": "DRAFT",
+    "state": "DRAFT",
+    "visibility": "PUBLIC",    
     "subject": {
       "conceptURI": "string",
       "label": {
@@ -182,7 +186,9 @@ function get(params) {
       "additionalProp3": "string"
     },
     "editorialNote": "string",
-    "status": "INCOMPLETE",
+    "status": "DRAFT",
+    "state": "DRAFT",
+    "visibility": "PUBLIC",       
     "subject": {
       "conceptURI": "string",
       "label": {

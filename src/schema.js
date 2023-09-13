@@ -14,7 +14,9 @@ function add(params) {
     },
     "type": "PROFILE",
     "prefix": "string",
-    "status": "INCOMPLETE",
+    "status": "DRAFT",
+    "state": "DRAFT",
+    "visibility": "PUBLIC",       
     "label": {
       "additionalProp1": "string",
       "additionalProp2": "string",
@@ -110,7 +112,9 @@ function upload(params) {
     },
     "type": "PROFILE",
     "prefix": "string",
-    "status": "INCOMPLETE",
+    "status": "DRAFT",
+    "state": "DRAFT",
+    "visibility": "PUBLIC", 
     "label": {
       "additionalProp1": "string",
       "additionalProp2": "string",
@@ -206,7 +210,9 @@ function get(params) {
     },
     "type": "PROFILE",
     "prefix": "string",
-    "status": "INCOMPLETE",
+    "status": "DRAFT",
+    "state": "DRAFT",
+    "visibility": "PUBLIC", 
     "label": {
       "additionalProp1": "string",
       "additionalProp2": "string",
@@ -303,7 +309,9 @@ function getAllSchemas(params) {
       },
       "type": "PROFILE",
       "prefix": "string",
-      "status": "INCOMPLETE",
+      "status": "DRAFT",
+      "state": "DRAFT",
+      "visibility": "PUBLIC", 
       "organizations": [
         {
           "id": "1",
@@ -337,7 +345,9 @@ function getAllSchemas(params) {
       },
       "type": "PROFILE",
       "prefix": "string",
-      "status": "INCOMPLETE",
+      "status": "DRAFT",
+      "state": "DRAFT",
+      "visibility": "PUBLIC", 
       "organizations": [
         {
           "id": "1",
