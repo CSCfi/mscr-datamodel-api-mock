@@ -52,6 +52,402 @@ function organizations(params) {
   ]
 }
 
+function mscrSearchPersonalContent({_type}) {
+  if( _type == 'CROSSWALK') {
+    return {
+      "took": 12,
+      "timed_out": false,
+      "_shards": {
+        "failed": 0.0,
+        "successful": 2.0,
+        "total": 2.0,
+        "skipped": 0.0
+      },
+      "hits": {
+        "total": {
+          "relation": "eq",
+          "value": 1
+        },
+        "hits": [
+          {
+            "_index": "crosswalks_v2",
+            "_id": "urn%3AIAMNOTAPID%3A741951a5-7f29-4a85-85bc-5f7439df864b",
+            "_source": {
+              "id": "urn:IAMNOTAPID:741951a5-7f29-4a85-85bc-5f7439df864b",
+              "label": {
+                "en": "string"
+              },
+              "status": "VALID",
+              "modified": "2023-09-14T05:34:29.674Z",
+              "created": "2023-09-14T05:34:29.674Z",
+              "contentModified": "2023-09-14T05:34:29.664Z",
+              "type": "CROSSWALK",
+              "state": "DRAFT",
+              "visibility": "PUBLIC",
+              "prefix": "urn:IAMNOTAPID:741951a5-7f29-4a85-85bc-5f7439df864b",
+              "comment": {
+                "en": "string2"
+              },
+              "contributor": [
+                "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63"
+              ],
+              "organizations": [
+                {
+                  "id": "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63",
+                  "label": {
+                    "fi": "test",
+                    "sv": "test",
+                    "en": "test"
+                  }
+                }
+              ],
+              "isPartOf": [],
+              "language": [
+                "en"
+              ],
+              "numberOfRevisions": 0,
+              "owner": [
+                "4ce70937-6fa4-49af-a229-b5f10328adb8"
+              ],
+              "sourceSchema": "urn:IAMNOTAPID:3484146d-f2d2-4552-bfde-e42ec7de0e52",
+              "targetSchema": "urn:IAMNOTAPID:35d37410-5b1c-428c-98c7-f97539f991fd"
+            },
+            "sort": [
+              null
+            ]
+          }
+        ]
+      },
+      "aggregations": {
+        "sterms#isReferenced": {
+          "buckets": [],
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0
+        },
+        "sterms#organization": {
+          "buckets": [],
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0
+        },
+        "sterms#format": {
+          "buckets": [],
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0
+        },
+        "sterms#state": {
+          "buckets": [
+            {
+              "doc_count": 1,
+              "key": "DRAFT"
+            }
+          ],
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0
+        },
+        "sterms#type": {
+          "buckets": [
+            {
+              "doc_count": 1,
+              "key": "CROSSWALK"
+            }
+          ],
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0
+        }
+      }
+    }
+  }
+  if(_type == 'SCHEMA') {
+    return {
+      "took": 48,
+      "timed_out": false,
+      "_shards": {
+        "failed": 0.0,
+        "successful": 2.0,
+        "total": 2.0,
+        "skipped": 0.0
+      },
+      "hits": {
+        "total": {
+          "relation": "eq",
+          "value": 1
+        },
+        "hits": [
+          {
+            "_index": "schemas_v2",
+            "_id": "urn%3AIAMNOTAPID%3A6897c665-b26b-48e5-b31a-fe1e3f31df36",
+            "_source": {
+              "id": "urn:IAMNOTAPID:6897c665-b26b-48e5-b31a-fe1e3f31df36",
+              "label": {
+                "en": "string2"
+              },
+              "status": "DRAFT",
+              "modified": "2023-09-14T05:35:20.102Z",
+              "created": "2023-09-14T05:35:20.102Z",
+              "contentModified": "2023-09-14T05:35:20.098Z",
+              "type": "SCHEMA",
+              "state": "DRAFT",
+              "visibility": "PRIVATE",
+              "prefix": "urn:IAMNOTAPID:6897c665-b26b-48e5-b31a-fe1e3f31df36",
+              "comment": {
+                "en": "string"
+              },
+              "contributor": [
+                "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63"
+              ],
+              "organizations": [
+                {
+                  "id": "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63",
+                  "label": {
+                    "fi": "test",
+                    "sv": "test",
+                    "en": "test"
+                  }
+                }
+              ],
+              "isPartOf": [],
+              "language": [
+                "en"
+              ],
+              "format": "CSV",
+              "aggregationKey": "urn:IAMNOTAPID:6897c665-b26b-48e5-b31a-fe1e3f31df36",
+              "numberOfRevisions": 1,
+              "revisions": [
+                {
+                  "pid": "urn:IAMNOTAPID:6897c665-b26b-48e5-b31a-fe1e3f31df36",
+                  "created": 1694669720102,
+                  "label": {
+                    "en": "string2"
+                  },
+                  "versionLabel": "1"
+                }
+              ],
+              "owner": [
+                "4ce70937-6fa4-49af-a229-b5f10328adb8"
+              ]
+            },
+            "sort": [
+              null
+            ]
+          }
+        ]
+      },
+      "aggregations": {
+        "sterms#isReferenced": {
+          "buckets": [],
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0
+        },
+        "sterms#organization": {
+          "buckets": [],
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0
+        },
+        "sterms#format": {
+          "buckets": [
+            {
+              "doc_count": 1,
+              "key": "CSV"
+            }
+          ],
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0
+        },
+        "sterms#state": {
+          "buckets": [
+            {
+              "doc_count": 1,
+              "key": "DRAFT"
+            }
+          ],
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0
+        },
+        "sterms#type": {
+          "buckets": [
+            {
+              "doc_count": 1,
+              "key": "SCHEMA"
+            }
+          ],
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0
+        }
+      }
+    }
+  }
+  else {
+   return {
+    "took": 117,
+    "timed_out": false,
+    "_shards": {
+      "failed": 0.0,
+      "successful": 2.0,
+      "total": 2.0,
+      "skipped": 0.0
+    },
+    "hits": {
+      "total": {
+        "relation": "eq",
+        "value": 2
+      },
+      "hits": [
+        {
+          "_index": "crosswalks_v2",
+          "_id": "urn%3AIAMNOTAPID%3A741951a5-7f29-4a85-85bc-5f7439df864b",
+          "_source": {
+            "id": "urn:IAMNOTAPID:741951a5-7f29-4a85-85bc-5f7439df864b",
+            "label": {
+              "en": "string"
+            },
+            "status": "VALID",
+            "modified": "2023-09-14T05:34:29.674Z",
+            "created": "2023-09-14T05:34:29.674Z",
+            "contentModified": "2023-09-14T05:34:29.664Z",
+            "type": "CROSSWALK",
+            "state": "DRAFT",
+            "visibility": "PUBLIC",
+            "prefix": "urn:IAMNOTAPID:741951a5-7f29-4a85-85bc-5f7439df864b",
+            "comment": {
+              "en": "string2"
+            },
+            "contributor": [
+              "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63"
+            ],
+            "organizations": [
+              {
+                "id": "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63",
+                "label": {
+                  "fi": "test",
+                  "sv": "test",
+                  "en": "test"
+                }
+              }
+            ],
+            "isPartOf": [],
+            "language": [
+              "en"
+            ],
+            "numberOfRevisions": 0,
+            "owner": [
+              "4ce70937-6fa4-49af-a229-b5f10328adb8"
+            ],
+            "sourceSchema": "urn:IAMNOTAPID:3484146d-f2d2-4552-bfde-e42ec7de0e52",
+            "targetSchema": "urn:IAMNOTAPID:35d37410-5b1c-428c-98c7-f97539f991fd"
+          },
+          "sort": [
+            null
+          ]
+        },
+        {
+          "_index": "schemas_v2",
+          "_id": "urn%3AIAMNOTAPID%3A6897c665-b26b-48e5-b31a-fe1e3f31df36",
+          "_source": {
+            "id": "urn:IAMNOTAPID:6897c665-b26b-48e5-b31a-fe1e3f31df36",
+            "label": {
+              "en": "string2"
+            },
+            "status": "DRAFT",
+            "modified": "2023-09-14T05:35:20.102Z",
+            "created": "2023-09-14T05:35:20.102Z",
+            "contentModified": "2023-09-14T05:35:20.098Z",
+            "type": "SCHEMA",
+            "state": "DRAFT",
+            "visibility": "PRIVATE",
+            "prefix": "urn:IAMNOTAPID:6897c665-b26b-48e5-b31a-fe1e3f31df36",
+            "comment": {
+              "en": "string"
+            },
+            "contributor": [
+              "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63"
+            ],
+            "organizations": [
+              {
+                "id": "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63",
+                "label": {
+                  "fi": "test",
+                  "sv": "test",
+                  "en": "test"
+                }
+              }
+            ],
+            "isPartOf": [],
+            "language": [
+              "en"
+            ],
+            "format": "CSV",
+            "aggregationKey": "urn:IAMNOTAPID:6897c665-b26b-48e5-b31a-fe1e3f31df36",
+            "numberOfRevisions": 1,
+            "revisions": [
+              {
+                "pid": "urn:IAMNOTAPID:6897c665-b26b-48e5-b31a-fe1e3f31df36",
+                "created": 1694669720102,
+                "label": {
+                  "en": "string2"
+                },
+                "versionLabel": "1"
+              }
+            ],
+            "owner": [
+              "4ce70937-6fa4-49af-a229-b5f10328adb8"
+            ]
+          },
+          "sort": [
+            null
+          ]
+        }
+      ]
+    },
+    "aggregations": {
+      "sterms#isReferenced": {
+        "buckets": [],
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0
+      },
+      "sterms#organization": {
+        "buckets": [],
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0
+      },
+      "sterms#format": {
+        "buckets": [
+          {
+            "doc_count": 1,
+            "key": "CSV"
+          }
+        ],
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0
+      },
+      "sterms#state": {
+        "buckets": [
+          {
+            "doc_count": 2,
+            "key": "DRAFT"
+          }
+        ],
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0
+      },
+      "sterms#type": {
+        "buckets": [
+          {
+            "doc_count": 1,
+            "key": "CROSSWALK"
+          },
+          {
+            "doc_count": 1,
+            "key": "SCHEMA"
+          }
+        ],
+        "doc_count_error_upper_bound": 0,
+        "sum_other_doc_count": 0
+      }
+    }
+  } 
+  }
+}
+
 function mscrSearch({ _type }) {
   if (_type == 'CROSSWALK') {
     return {
@@ -401,5 +797,6 @@ function mscrSearch({ _type }) {
 module.exports = {
   searchModels,
   organizations,
-  mscrSearch
+  mscrSearch,
+  mscrSearchPersonalContent
 }

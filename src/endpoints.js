@@ -137,6 +137,17 @@ module.exports = function (app) {
     return res.status(200).send(frontend.mscrSearch({ "_type": type }));
   });
 
+
+  app.get("/datamodel-api/v2/frontend/mscrSearchPersonalContent", (req, res) => {
+    /*  #swagger.tags = ['Frontend']
+     */
+    const type = req.query.type;
+    res.setHeader("Content-Type", "application/json");
+    return res.status(200).send(frontend.mscrSearchPersonalContent({ "_type": type }));
+  });
+
+
+  
   /*** ADMIN */
   app.get("/datamodel-api/v2/fakeableUsers", (req, res) => {
     /*  #swagger.tags = ['Crosswalk']
