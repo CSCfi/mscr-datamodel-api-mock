@@ -51,7 +51,130 @@ function organizations(params) {
     }
   ]
 }
-
+function mscrSearchOrgContent() {
+  return {
+  "took": 22,
+  "timed_out": false,
+  "_shards": {
+    "failed": 0.0,
+    "successful": 2.0,
+    "total": 2.0,
+    "skipped": 0.0
+  },
+  "hits": {
+    "total": {
+      "relation": "eq",
+      "value": 2
+    },
+    "hits": [
+      {
+        "_index": "crosswalks_v2",
+        "_id": "urn%3AIAMNOTAPID%3A9f17eb5a-6763-4ff1-b100-e5ea5a4d12a7",
+        "_source": {
+          "id": "urn:IAMNOTAPID:9f17eb5a-6763-4ff1-b100-e5ea5a4d12a7",
+          "label": {
+            "en": "string"
+          },
+          "status": "VALID",
+          "modified": "2023-09-14T05:57:42.514Z",
+          "created": "2023-09-14T05:57:42.514Z",
+          "contentModified": "2023-09-14T05:57:42.513Z",
+          "type": "CROSSWALK",
+          "state": "DRAFT",
+          "visibility": "PUBLIC",
+          "prefix": "urn:IAMNOTAPID:9f17eb5a-6763-4ff1-b100-e5ea5a4d12a7",
+          "comment": {
+            "en": "string2"
+          },
+          "contributor": [
+            "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63"
+          ],
+          "organizations": [
+            {
+              "id": "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63",
+              "label": {
+                "fi": "test",
+                "sv": "test",
+                "en": "test"
+              }
+            }
+          ],
+          "isPartOf": [],
+          "language": [
+            "en"
+          ],
+          "numberOfRevisions": 0,
+          "owner": [
+            "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63"
+          ],
+          "sourceSchema": "urn:IAMNOTAPID:3484146d-f2d2-4552-bfde-e42ec7de0e52",
+          "targetSchema": "urn:IAMNOTAPID:35d37410-5b1c-428c-98c7-f97539f991fd"
+        },
+        "sort": [
+          null
+        ]
+      },
+      {
+        "_index": "schemas_v2",
+        "_id": "urn%3AIAMNOTAPID%3Ae6299355-c73d-45b5-9735-dbf959bf1f7d",
+        "_source": {
+          "id": "urn:IAMNOTAPID:e6299355-c73d-45b5-9735-dbf959bf1f7d",
+          "label": {
+            "en": "string2"
+          },
+          "status": "DRAFT",
+          "modified": "2023-09-14T05:57:15.344Z",
+          "created": "2023-09-14T05:57:15.344Z",
+          "contentModified": "2023-09-14T05:57:15.32Z",
+          "type": "SCHEMA",
+          "state": "DRAFT",
+          "visibility": "PRIVATE",
+          "prefix": "urn:IAMNOTAPID:e6299355-c73d-45b5-9735-dbf959bf1f7d",
+          "comment": {
+            "en": "string"
+          },
+          "contributor": [
+            "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63"
+          ],
+          "organizations": [
+            {
+              "id": "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63",
+              "label": {
+                "fi": "test",
+                "sv": "test",
+                "en": "test"
+              }
+            }
+          ],
+          "isPartOf": [],
+          "language": [
+            "en"
+          ],
+          "format": "CSV",
+          "aggregationKey": "urn:IAMNOTAPID:e6299355-c73d-45b5-9735-dbf959bf1f7d",
+          "numberOfRevisions": 1,
+          "revisions": [
+            {
+              "pid": "urn:IAMNOTAPID:e6299355-c73d-45b5-9735-dbf959bf1f7d",
+              "created": 1694671035344,
+              "label": {
+                "en": "string2"
+              },
+              "versionLabel": "1"
+            }
+          ],
+          "owner": [
+            "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63"
+          ]
+        },
+        "sort": [
+          null
+        ]
+      }
+    ]
+  }
+}
+}
 function mscrSearchPersonalContent({_type}) {
   if( _type == 'CROSSWALK') {
     return {
@@ -798,5 +921,6 @@ module.exports = {
   searchModels,
   organizations,
   mscrSearch,
-  mscrSearchPersonalContent
+  mscrSearchPersonalContent,
+  mscrSearchOrgContent
 }

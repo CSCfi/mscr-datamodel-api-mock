@@ -146,6 +146,13 @@ module.exports = function (app) {
     return res.status(200).send(frontend.mscrSearchPersonalContent({ "_type": type }));
   });
 
+  app.get("/datamodel-api/v2/frontend/mscrSearchOrgContent", (req, res) => {
+    /*  #swagger.tags = ['Frontend']
+     */
+    
+    res.setHeader("Content-Type", "application/json");
+    return res.status(200).send(frontend.mscrSearchOrgContent());
+  });
 
   
   /*** ADMIN */
