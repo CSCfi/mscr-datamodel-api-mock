@@ -100,7 +100,7 @@ module.exports = function (app) {
     return res.status(200).send(frontend.organizations(true));
   });
 
-  app.get("/datamodel-api/v2/frontend/schemas", (req, res) => {
+  app.get("/datamodel-api/v2/schemas", (req, res) => {
     /*
      */
     res.setHeader("Content-Type", "application/json");
@@ -113,7 +113,8 @@ module.exports = function (app) {
         (x) =>
           x.status === status &&
           x.organizations.includes((y) => y.id == organization)
-      );
+    );
+    return res.status(200).send(result);
   })
   /**** FRONTEND */
   app.get("/datamodel-api/v2/frontend/searchModels", (req, res) => {

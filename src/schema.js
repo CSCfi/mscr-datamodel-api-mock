@@ -8,6 +8,7 @@ function add(params) {
       "id": "string",
       "name": "string",
     },
+    "label":"Schema Number 1",
     "creator": {
       "id": "string",
       "name": "string",
@@ -303,6 +304,7 @@ function getAllSchemas(params) {
         "id": "1",
         "name": "string",
       },
+      "label":"Schema Number 1",
       "creator": {
         "id": "1",
         "name": "one",
@@ -339,6 +341,7 @@ function getAllSchemas(params) {
         "id": "2",
         "name": "string",
       },
+      "label":"schema number 2",
       "creator": {
         "id": "2",
         "name": "two",
@@ -375,6 +378,7 @@ function getAllSchemas(params) {
         "id": "3",
         "name": "string",
       },
+      "label":"Schema Number 3",
       "creator": {
         "id": "2",
         "name": "two",
