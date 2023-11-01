@@ -714,7 +714,7 @@ function mscrSearch({ _type }) {
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0
         },
-        "sterms#status": {
+        "sterms#state": {
           "buckets": [
             {
               "doc_count": 1,
@@ -1026,7 +1026,7 @@ function mscrSearch({ _type }) {
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0
         },
-        "sterms#status": {
+        "sterms#state": {
           "buckets": [
             {
               "doc_count": 1,
