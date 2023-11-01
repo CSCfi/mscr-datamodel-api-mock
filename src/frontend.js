@@ -640,22 +640,76 @@ function mscrSearch({ _type }) {
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0
         },
+        "sterms#sourceType": {
+          "buckets": [
+            {
+              "doc_count": 12,
+              "key": "HOSTED",
+              "label": "hosted"
+            },
+            {
+              "doc_count": 212,
+              "key": "REFERENCED",
+              "label": "referenced"
+            }            
+          ],
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0
+        },        
         "sterms#organization": {
-          "buckets": [],
+          "buckets": [
+            {
+              "doc_count": 1,
+              "key": "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63",
+              "label": "test org"
+            }
+          ],
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0
         },
         "sterms#format": {
-          "buckets": [],
+          "buckets": [
+            {
+              "doc_count": 1,
+              "key": "CSV",
+              "label": "CSV"
+            },
+            {
+              "doc_count": 2,
+              "key": "JSON",
+              "label": "JSON"
+            },
+            {
+              "doc_count": 3,
+              "key": "XML",
+              "label": "XML"
+            },
+            {
+              "doc_count": 1,
+              "key": "XLST",
+              "label": "XLST"
+            },
+            {
+              "doc_count": 13,
+              "key": "MSCR",
+              "label": "MSCR"
+            }                                    
+          ],
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0
         },
         "sterms#type": {
           "buckets": [
             {
-              "doc_count": 1,
-              "key": "CROSSWALK"
-            }
+              "doc_count": 41,
+              "key": "CROSSWALK",
+              "label": "Crosswalk"
+            },
+            {
+              "doc_count": 12,
+              "key": "SCHEMA",
+              "label": "Schema"
+            },            
           ],
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0
@@ -664,8 +718,29 @@ function mscrSearch({ _type }) {
           "buckets": [
             {
               "doc_count": 1,
-              "key": "VALID"
-            }
+              "key": "DRAFT",
+              "label": "Valid"
+            },
+            {
+              "doc_count": 1,
+              "key": "PUBLISHED",
+              "label": "Published"
+            },
+            {
+              "doc_count": 1,
+              "key": "INVALID",
+              "label": "Invalid"
+            },
+            {
+              "doc_count": 1,
+              "key": "DEPRECATED",
+              "label": "Deprecated"
+            },
+            {
+              "doc_count": 1,
+              "key": "REMOVED",
+              "label": "Removed"
+            }                                                
           ],
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0
@@ -877,17 +952,60 @@ function mscrSearch({ _type }) {
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0
         },
+        "sterms#sourceType": {
+          "buckets": [
+            {
+              "doc_count": 12,
+              "key": "HOSTED",
+              "label": "hosted"
+            },
+            {
+              "doc_count": 212,
+              "key": "REFERENCED",
+              "label": "referenced"
+            }            
+          ],
+          "doc_count_error_upper_bound": 0,
+          "sum_other_doc_count": 0
+        },        
         "sterms#organization": {
-          "buckets": [],
+          "buckets": [
+            {
+              "doc_count": 1,
+              "key": "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63",
+              "label": "test org"
+            }
+          ],
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0
         },
         "sterms#format": {
           "buckets": [
             {
+              "doc_count": 1,
+              "key": "CSV",
+              "label": "CSV"
+            },
+            {
+              "doc_count": 2,
+              "key": "JSON",
+              "label": "JSON"
+            },
+            {
               "doc_count": 3,
-              "key": "JSONSCHEMA"
-            }
+              "key": "XML",
+              "label": "XML"
+            },
+            {
+              "doc_count": 1,
+              "key": "XLST",
+              "label": "XLST"
+            },
+            {
+              "doc_count": 13,
+              "key": "MSCR",
+              "label": "MSCR"
+            }                                    
           ],
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0
@@ -895,9 +1013,15 @@ function mscrSearch({ _type }) {
         "sterms#type": {
           "buckets": [
             {
-              "doc_count": 3,
-              "key": "SCHEMA"
-            }
+              "doc_count": 41,
+              "key": "CROSSWALK",
+              "label": "Crosswalk"
+            },
+            {
+              "doc_count": 12,
+              "key": "SCHEMA",
+              "label": "Schema"
+            },            
           ],
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0
@@ -905,9 +1029,30 @@ function mscrSearch({ _type }) {
         "sterms#status": {
           "buckets": [
             {
-              "doc_count": 3,
-              "key": "DRAFT"
-            }
+              "doc_count": 1,
+              "key": "DRAFT",
+              "label": "Valid"
+            },
+            {
+              "doc_count": 1,
+              "key": "PUBLISHED",
+              "label": "Published"
+            },
+            {
+              "doc_count": 1,
+              "key": "INVALID",
+              "label": "Invalid"
+            },
+            {
+              "doc_count": 1,
+              "key": "DEPRECATED",
+              "label": "Deprecated"
+            },
+            {
+              "doc_count": 1,
+              "key": "REMOVED",
+              "label": "Removed"
+            }                                                
           ],
           "doc_count_error_upper_bound": 0,
           "sum_other_doc_count": 0
