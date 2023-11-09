@@ -303,7 +303,7 @@
         }
       }
     },
-    "/v2/fakeableUsers": {
+    "/v2/fakeable-users": {
       "get": {
         "tags": [
           "Crosswalk"

@@ -215,9 +215,9 @@ function get(params) {
     "state": "DRAFT",
     "visibility": "PUBLIC", 
     "label": {
-      "additionalProp1": "string",
-      "additionalProp2": "string",
-      "additionalProp3": "string",
+      "additionalProp1": "MARC to MODS",
+      "additionalProp2": "MARC to MODS",
+      "additionalProp3": "MARC to MODS",
     },
     "description": {
       "additionalProp1": "string",
@@ -304,16 +304,17 @@ function getAllSchemas(params) {
         "id": "1",
         "name": "string",
       },
-      "label":"Schema Number 1",
+      "label":"MARC to MODS 1",
       "creator": {
         "id": "1",
         "name": "one",
       },
       "type": "PROFILE",
-      "prefix": "string",
+      "prefix": "http/example.org/space/1.0",
       "status": "DRAFT",
       "state": "DRAFT",
       "visibility": "PUBLIC", 
+      "revision":"1.1(+5 other)",
       "organizations": [
         {
           "id": "1",
@@ -341,16 +342,17 @@ function getAllSchemas(params) {
         "id": "2",
         "name": "string",
       },
-      "label":"schema number 2",
+      "label":"DTC to EML",
       "creator": {
         "id": "2",
         "name": "two",
       },
       "type": "PROFILE",
-      "prefix": "string",
+      "prefix": "http/example.org/space/1.0",
       "status": "DRAFT",
       "state": "DRAFT",
       "visibility": "PUBLIC", 
+      "revision":"1.1(+5 other)",
       "organizations": [
         {
           "id": "1",
@@ -378,14 +380,15 @@ function getAllSchemas(params) {
         "id": "3",
         "name": "string",
       },
-      "label":"Schema Number 3",
+      "label":"Datacite to Dublin Core",
       "creator": {
         "id": "2",
         "name": "two",
       },
       "type": "PROFILE",
-      "prefix": "string",
+      "prefix": "http/example.org/space/1.0",
       "status": "INCOMPLETE",
+      "revision":"1.1(+5 other)",
       "organizations": [
         {
           "id": "2",

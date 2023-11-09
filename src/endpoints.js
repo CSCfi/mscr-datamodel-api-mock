@@ -157,7 +157,7 @@ module.exports = function (app) {
 
   
   /*** ADMIN */
-  app.get("/datamodel-api/v2/fakeableUsers", (req, res) => {
+  app.get("/datamodel-api/v2/fakeable-users", (req, res) => {
     /*  #swagger.tags = ['Crosswalk']
      */
     res.setHeader("Content-Type", "application/json");
@@ -179,7 +179,7 @@ module.exports = function (app) {
   });
 
   /*** ADMIN */
-  app.get("/v2/fakeableUsers", (req, res) => {
+  app.get("/v2/fakeable-users", (req, res) => {
     /*  #swagger.tags = ['Crosswalk']
      */
     res.setHeader("Content-Type", "application/json");
