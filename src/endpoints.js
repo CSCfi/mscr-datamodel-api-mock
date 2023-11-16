@@ -100,6 +100,12 @@ module.exports = function (app) {
     return res.status(200).send(frontend.organizations(true));
   });
 
+  app.get("/datamodel-api/v2/frontend/filters", (req, res) => {
+    res.setHeader("Content-Type", "application/json");
+    return res.status(200).send(frontend.filters());
+  });
+
+
   app.get("/datamodel-api/v2/schemas", (req, res) => {
     /*
      */

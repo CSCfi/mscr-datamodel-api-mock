@@ -1,3 +1,141 @@
+function filters() {
+  return [
+    {
+      "name": "equals",
+      "uri": "=",
+      "description": "",
+      "parameters": [
+        {
+          "name": "input",
+          "datatype": "object",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "datatype": "object",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "not equals",
+      "uri": "!=",
+      "description": "",
+      "parameters": [
+        {
+          "name": "input",
+          "datatype": "object",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "datatype": "object",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "in",
+      "uri": "in",
+      "description": "",
+      "parameters": [
+        {
+          "name": "input",
+          "datatype": "object",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "datatype": "object",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "startsWith",
+      "uri": "startsWith",
+      "description": "",
+      "parameters": [
+        {
+          "name": "input",
+          "datatype": "object",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "datatype": "object",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "isURI",
+      "uri": "isURI",
+      "description": "",
+      "parameters": [
+        {
+          "name": "input",
+          "datatype": "object",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "datatype": "object",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "contains",
+      "uri": "contains",
+      "description": "",
+      "parameters": [
+        {
+          "name": "input",
+          "datatype": "object",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "datatype": "object",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Does not contain",
+      "uri": "!contains",
+      "description": "",
+      "parameters": [
+        {
+          "name": "input",
+          "datatype": "object",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "datatype": "object",
+          "required": true
+        }
+      ]
+    }
+  ]
+
+}
 function searchModels(params) {
   return {
     "totalHitCount": 0,
@@ -1067,5 +1205,6 @@ module.exports = {
   organizations,
   mscrSearch,
   mscrSearchPersonalContent,
-  mscrSearchOrgContent
+  mscrSearchOrgContent,
+  filters
 }
