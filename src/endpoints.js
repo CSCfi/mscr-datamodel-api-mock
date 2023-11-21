@@ -136,6 +136,14 @@ module.exports = function (app) {
     return res.status(200).send(frontend.organizations(true));
   });
 
+  app.get("/datamodel-api/v2/frontend/schema/:pid", (req, res) => {
+    /*  #swagger.tags = ['Frontend']
+     */
+    const type = req.query.type;
+    res.setHeader("Content-Type", "application/json");
+    return res.status(200).send(frontend.schema());
+  });  
+
   app.get("/datamodel-api/v2/frontend/mscrSearch", (req, res) => {
     /*  #swagger.tags = ['Frontend']
      */
