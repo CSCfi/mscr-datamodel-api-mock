@@ -22,8 +22,13 @@ function user(params) {
       authorities: [ { authority: 'ROLE_ADMIN' }, { authority: 'ROLE_USER' } ],
       organizations: [
         {
-          id: '7d3a3c00-5a6b-489b-a3ed-63bb58c26a63',
-          name: "Test org"
+          "id": "7d3a3c00-5a6b-489b-a3ed-63bb58c26a63",
+          "label": {
+            "sv": "Utvecklare av interoperabilitetsplattform",
+            "fi": "Yhteentoimivuusalustan yllapito",
+            "en": "Interoperability platform developers"
+          },
+          "parentOrganization": null
         }
       ]
     }
